@@ -1,0 +1,100 @@
+body {
+    padding-top: 70px; /* Ajuste para que el contenido no se vea oculto detrás del navbar */
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff; /* Fondo blanco del navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra debajo del navbar */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar .nav-link {
+    font-size: 1.1rem;
+    color: #555;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+/* Colores del enlace activo y hover */
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: #008C45; /* Verde de la bandera italiana */
+}
+
+.navbar .nav-link:hover {
+    color: #CD212A; /* Rojo de la bandera italiana */
+}
+
+/* Borde inferior con colores de Italia */
+.navbar {
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(to right, #008C45, #ffffff, #CD212A); /* Verde, blanco, rojo */
+    border-image-slice: 1;
+}
+
+/* Encabezado del formulario */
+#form header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Estilo del formulario */
+#formulario .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+#formulario .form-control {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#formulario .form-control:focus {
+    border-color: #008C45; /* Verde italiano al enfocar */
+    box-shadow: 0 0 5px rgba(0, 140, 69, 0.25); /* Sombra verde italiano */
+}
+
+/* Botón de enviar con colores italianos */
+#formulario button[type="submit"], #order-button {
+    background-color: #CD212A; /* Rojo italiano */
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 5;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#formulario button[type="submit"]:hover, #order-button:hover {
+    background-color: #008C45; /* Verde italiano */
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+}
+
+#signup {
+    color: #CD212A;
+    font-weight: bold; /* Hace el texto más llamativo */
+}
+
+#signup:hover {
+    color: #008C45; /* Cambia a verde italiano al pasar el cursor */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}

@@ -1,0 +1,124 @@
+body {
+    padding-top: 70px; /* Ajuste para que el contenido no se vea oculto detrás del navbar */
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff; /* Fondo blanco del navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra debajo del navbar */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar .nav-link {
+    font-size: 1.1rem;
+    color: #555;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+/* Colores del enlace activo y hover */
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: #008C45; /* Verde de la bandera italiana */
+}
+
+.navbar .nav-link:hover {
+    color: #CD212A; /* Rojo de la bandera italiana */
+}
+
+/* Borde inferior con colores de Italia */
+.navbar {
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(to right, #008C45, #ffffff, #CD212A); /* Verde, blanco, rojo */
+    border-image-slice: 1;
+}
+
+.card {
+    transition: transform 0.2s; /* Transición suave para el efecto de hover */
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón sobre la tarjeta */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Ajuste del tamaño de fuente del título */
+    color: #343a40; /* Color del texto del título */
+}
+
+.card-text {
+    font-size: 0.9rem; /* Ajuste del tamaño de fuente del texto */
+    color: #6c757d; /* Color del texto del cuerpo */
+}
+
+.precio{
+    font-size: 1.2rem;
+    color: #CD212A; /* Rojo italiano */
+}
+
+.card-img-top {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
+    height: 200px; /* Establece una altura específica */
+    object-fit: cover; /* Asegúrate de que la imagen mantenga su relación de aspecto */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.carrito {
+    padding: 0 10px;
+}
+
+.carrito button[type="submit"]{
+    background-color: #CD212A; /* Rojo italiano */
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    padding: 10px 20px;
+}
+
+.carrito button[type="submit"]:hover {
+    background-color: #008C45; /* Verde italiano */
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+}
+
+.btncantidad {
+    display: flex;
+    align-items: center;
+}
+
+.btncantidad .btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.cantidad {
+    font-size: 1.2rem;
+    width: 40px;
+    text-align: center;
+}

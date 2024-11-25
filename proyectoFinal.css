@@ -1,0 +1,154 @@
+/* Estilo general */
+body {
+    padding-top: 70px; /* Ajuste para que el contenido no se vea oculto detrás del navbar */
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff; /* Fondo blanco del navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra debajo del navbar */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar .nav-link {
+    font-size: 1.1rem;
+    color: #555;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+/* Colores del enlace activo y hover */
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: #008C45; /* Verde de la bandera italiana */
+}
+
+.navbar .nav-link:hover {
+    color: #CD212A; /* Rojo de la bandera italiana */
+}
+
+/* Borde inferior con colores de Italia */
+.navbar {
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(to right, #008C45, #ffffff, #CD212A); /* Verde, blanco, rojo */
+    border-image-slice: 1;
+}
+
+#boton {
+    background-color: #CD212A; /* Rojo italiano */
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#boton:hover {
+    background-color: #008C45; /* Verde italiano */
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+}
+
+/* Carrusel */
+.carousel-inner img {
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeInDown 1s ease;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+    animation: fadeInUp 1s ease;
+}
+
+/* Sección de horario */
+#horario h3 {
+    color: #ff5733;
+    font-size: 2.5rem;
+}
+
+.accordion-button {
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #218838;
+}
+
+.accordion-body {
+    background-color: #f8f9fa;
+}
+
+.accordion-item {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #218838;
+    color: white;
+}
+
+#lugar{
+    border-radius: 15px;
+}
+
+/* Teléfono */
+#horario p a {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+#horario p a:hover {
+    color: #ff5733;
+}
+
+/* Ubicación */
+#ubicacion h3 {
+    font-size: 2.5rem;
+    color: #28a745;
+}
+
+#ubicacion p {
+    font-size: 1.25rem;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+
+img {
+    animation: fadeIn 1s ease;
+}
+
+button, a.btn {
+    animation: fadeIn 1s ease;
+}

@@ -1,0 +1,46 @@
+/* Estilo general */
+body {
+    padding-top: 70px; /* Ajuste para que el contenido no se vea oculto detrás del navbar */
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff; /* Fondo blanco del navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra debajo del navbar */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar .nav-link {
+    font-size: 1.1rem;
+    color: #555;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+/* Colores del enlace activo y hover */
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: #008C45; /* Verde de la bandera italiana */
+}
+
+.navbar .nav-link:hover {
+    color: #CD212A; /* Rojo de la bandera italiana */
+}
+
+/* Borde inferior con colores de Italia */
+.navbar {
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(to right, #008C45, #ffffff, #CD212A); /* Verde, blanco, rojo */
+    border-image-slice: 1;
+}
