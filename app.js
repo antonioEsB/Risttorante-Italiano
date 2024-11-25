@@ -26,11 +26,11 @@ app.use(session({
 
 //Configurar la conexion con la base de datos
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '12345',
+    database: process.env.DB_NAME || 'web',
+    port: process.env.DB_PORT || 3306
 });
 
 //Conectar a la base de datos
@@ -43,9 +43,9 @@ db.connect((err) => {//funcion de callback que se ejecuta cuando se intenta cone
 });
 
 // Ruta para manejar la solicitud raíz
-app.get('/', (res) => {
-    res.send('Bienvenido a la aplicación del restaurante!');
-});
+// app.get('/', (res) => {
+//     res.send('Bienvenido a la aplicación del restaurante!');
+// });
 
 //Ruta para manejar el formulario de reservacion 
 app.post('/reservacion', (req, res) =>{
