@@ -7,7 +7,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     const password = document.getElementById('password').value;
 
     // Enviar los datos al servidor utilizando fetch
-    fetch('http://localhost:3000/registrar', {
+    fetch('https://risttorante-italiano-production.up.railway.app/registrar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

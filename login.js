@@ -4,7 +4,7 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     const correo = document.getElementById("correo").value;
     const contrasena = document.getElementById("password").value;
 
-    fetch('http://localhost:3000/login', {
+    fetch('https://risttorante-italiano-production.up.railway.app/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

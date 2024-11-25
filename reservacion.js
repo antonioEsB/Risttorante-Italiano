@@ -34,7 +34,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     };
 
     // Enviar los datos al servidor usando fetch
-    fetch('http://localhost:3001/reservacion', {
+    fetch('https://risttorante-italiano-production.up.railway.app/reservacion', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json' // Indicar que los datos son de tipo JSON en el encabezado de la petición 
@@ -63,7 +63,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
         function searchReservation() {
             const searchId = document.getElementById('search-id').value;
 
-            fetch(`http://localhost:3001/reservacion/${searchId}`)
+            fetch(`https://risttorante-italiano-production.up.railway.app/reservacion/${searchId}`)
                 .then(response => {
                     if (response.ok) {
                         return response.json();
@@ -96,7 +96,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
         // Función para eliminar una reservación
 function deleteReservation(id) {
     if (confirm(`¿Seguro que quieres eliminar la reservación con ID ${id}?`)) {
-        fetch(`http://localhost:3001/reservacion/${id}`, {
+        fetch(`https://risttorante-italiano-production.up.railway.app/reservacion/${id}`, {
             method: 'DELETE',
         })
         .then(response => {

@@ -4,7 +4,7 @@ function searchReservation() {
     const searchId = document.getElementById('search-id').value;
 
     // Realizar una solicitud a la API para buscar la reservación por ID
-    fetch(`http://localhost:3000/reservacion/${searchId}`)
+    fetch(`https://risttorante-italiano-production.up.railway.app/reservacion/${searchId}`)
         .then(response => {
             // Verificar si la respuesta del servidor es correcta
             if (response.ok) {
@@ -46,7 +46,7 @@ function deleteReservation(id) {
     // Confirmar que el usuario realmente quiere eliminar la reservación
     if (confirm(`¿Seguro que quieres eliminar la reservación con ID ${id}?`)) {
         // Realizar una solicitud DELETE a la API para eliminar la reservación
-        fetch(`http://localhost:3000/reservacion/${id}`, {
+        fetch(`https://risttorante-italiano-production.up.railway.app/reservacion/${id}`, {
             method: 'DELETE',
         })
         .then(response => {
@@ -77,7 +77,7 @@ function deleteReservation(id) {
 function searchTicket() {
     const ticketNumber = document.getElementById('search-ticket').value;
 
-    fetch(`http://localhost:3000/pedido/${ticketNumber}`)
+    fetch(`https://risttorante-italiano-production.up.railway.app/pedido/${ticketNumber}`)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -116,7 +116,7 @@ function searchTicket() {
 // Función para eliminar un pedido por número de ticket
 function deleteTicket(ticket) {
     if (confirm(`¿Seguro que quieres eliminar el pedido con ticket ${ticket}?`)) {
-        fetch(`http://localhost:3000/pedido/${ticket}`, {
+        fetch(`https://risttorante-italiano-production.up.railway.app/pedido/${ticket}`, {
             method: 'DELETE',
         })
         .then(response => {
