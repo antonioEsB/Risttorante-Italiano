@@ -1,5 +1,3 @@
-const API_URL = 'https://risttorante-italiano-production.up.railway.app';
-
 // Array que almacenará los productos del carrito
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
@@ -89,7 +87,7 @@ function realizarPedido() {
     ticketModal.show();
     
     // Enviar la orden al servidor
-    fetch('${API_URL}/carrito', {
+    fetch('https://risttorante-italiano-production.up.railway.app/carrito', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
