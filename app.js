@@ -42,6 +42,11 @@ db.connect((err) => {//funcion de callback que se ejecuta cuando se intenta cone
     }
 });
 
+// Ruta para manejar la solicitud raíz
+app.get('/', (res) => {
+    res.send('Bienvenido a la aplicación del restaurante!');
+});
+
 //Ruta para manejar el formulario de reservacion 
 app.post('/reservacion', (req, res) =>{
     console.log(req.body);
