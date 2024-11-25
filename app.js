@@ -4,7 +4,7 @@ const express = require('express');//import express para la creacion de la aplic
 const app = express();//creacion de la aplicacion 
 
 const mysql = require('mysql2');//import mysql para la conexion con la base de datos
-const port = 3000;//puerto de la aplicacion 
+const port = process.env.PORT || 3000;  // Usa el puerto desde las variables de entorno
 
 const bodyParser = require('body-parser');//import body-parser para manejar los datos de las peticiones http en formato json 
 
@@ -29,7 +29,8 @@ const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT
 });
 
 //Conectar a la base de datos
