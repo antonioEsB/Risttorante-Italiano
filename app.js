@@ -13,9 +13,15 @@ app.use(cors());
 
 const session = require('express-session');//import session para manejar sesiones de usuario
 
+const path = require('path');//import path para manejar rutas de archivos
+
 //Configurar el middleware para analizar el cuerpo de las solicitudes en formato json 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// Configurar Express para servir archivos estáticos desde el directorio actual
+app.use(express.static(__dirname));
+
 //Configurar el middleware para manejar sesiones de usuario 
 app.use(session({
     secret: 'secret',//clave secreta para firmar la cookie de la sesion
@@ -44,9 +50,7 @@ db.connect((err) => {//funcion de callback que se ejecuta cuando se intenta cone
 
 // Ruta para manejar la solicitud raíz
 app.get('/', (req, res) => {
-    console.log(req.body);//imprimir el cuerpo de la solicitud en la consola
-    console.log(req.session.usuario); // Imprimir el nombre del usuario en la consola
-    res.send('Bienvenido a la aplicación del restaurante!');
+    res.sendFile(path.join(__dirname, 'proyectoFinal.html'));
 });
 
 //Ruta para manejar el formulario de reservacion 
